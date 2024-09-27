@@ -7,6 +7,9 @@ fun printPersonInfo(person: Person?) {
     // 1. Wypisz imię osoby. W przypadku, kiedy jest nullem, wypisz domyślną wartość, np. "Unknown name"
     // 2. Sprawdź czy osoba jest dorosła, wypisz odpowiednią wiadomość na konsolę.
     // W przypadku, kiedy wiek jest nullem, wypisz "Age: Unknown"
+
+    println(person?.name ?: "Unknown name")
+    println(person?.age?.takeIf { it > 18 }  ?: "Age: Unknown")
 }
 
 fun main() {
